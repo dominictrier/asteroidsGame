@@ -1,8 +1,6 @@
 import pygame
-import main
 from CircleShape import CircleShape
 from constants import PLAYER_RADIUS, PLAYER_TURN_SPEED, PLAYER_SPEED
-from constants import SCREEN_WIDTH, SCREEN_HEIGHT
 
 
 class Player(CircleShape):
@@ -10,7 +8,7 @@ class Player(CircleShape):
         self.x = x
         self.y = y
         super().__init__(self.x,self.y,PLAYER_RADIUS)
-        self.rotation = 180
+        self.rotation = 0
 
     def triangle(self):
         forward = pygame.Vector2(0, 1).rotate(self.rotation)
